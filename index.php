@@ -1,3 +1,6 @@
+<?php
+	session_start();
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +41,11 @@
 			<button type="button" id="loginbutton">Manager<br>Login</button>
 		</div>
 	</div>
+	
+	<?php
+		$_SESSION["username"] = "user_name";
+		$_SESSION["password"] - "pass_word";
+	?>
 
 	<div class="search">
 		<form>
