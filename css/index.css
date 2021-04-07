@@ -16,7 +16,7 @@ body{
 
 .header .header-middle {
 	text-align: center;
-	line-height: 0.5;
+	line-height: 0.4;
 	background-color: lightblue;
 	border: 1px solid black;
 	width: 500px;
@@ -51,7 +51,7 @@ body{
 .gallery-slider {
 	/*border: 1px solid black;*/
 	margin-top: 20px;
-	height: 800px;
+	height: 500px;
 	width: 100%;
 	float: left;
 	overflow: hidden;
@@ -73,7 +73,7 @@ body{
 	line-height: 1.5;
 	color: white;
 	float: left;
-	padding-top: 16%;
+	box-sizing: border-box;
 }
 
 .gallery-slidder .item .foodinfo {
