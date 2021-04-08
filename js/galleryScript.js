@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// used to determine how many items will be displayed depending on window's width
 	sizes = [
 		{ breakPoint: { width: 0, item: 1 } },
 		{ breakPoint: { width: 600, item: 2 } },
@@ -6,7 +7,7 @@ $(document).ready(function () {
 	]
 	
 	for(let i = 0; i < sizes.length; i++) {
-		if (window.innerWidth > sizes[i].breakPoint.width) {
+		if (window.innerWidth >= sizes[i].breakPoint.width) {
 			numbItemsDisplaped = sizes[i].breakPoint.item;
 		}
 	}
@@ -15,7 +16,7 @@ $(document).ready(function () {
 	const CW = $(".gallery-container").width();  // container width
 	const M = 15;  // margin
 
-	$("#storeNumb").trigger("change");
+	// event function for when the value in store dropdown is changed
 	$("#storeNumb").change(function() {
 		$(".gallery-container").empty();
 		for(let i=0; i < food_array.length; i++) {
@@ -29,6 +30,7 @@ $(document).ready(function () {
 				'</div></div>');
 			}
 		}
+		// apply styling so that the width of each item stay consistant
 		$(".gallery-container > .item").css("width", (CW/numbItemsDisplaped)-M + "px" );
 		$(".gallery-container > .item").css("margin", (M/2) +"px");
 	});
@@ -40,9 +42,11 @@ $(document).ready(function () {
 
 	/* controlers */
 	var jump = 0;
+	// parameter: element that was click
 	$(".gallery-slider > .gallery-controls li").click(function(ele) {
 		var target = $(ele.target);
 
+		// applying a negative margin left allows for horizontal motion
 		if (target.attr("id") == "<"){
 			if(jump > 0 ) {
 				jump = jump - (CW);
@@ -56,8 +60,8 @@ $(document).ready(function () {
 				$(".gallery-container").css("margin-left", -jump + "px");
 			}
 		}
-		console.log("jump: "+jump);
-		console.log((CW / numbItemsDisplaped) * n);
+		//console.log("jump: "+jump);
+		//console.log((CW / numbItemsDisplaped) * n);
 	});
 
 });
