@@ -1,5 +1,6 @@
 body{
 	margin:0;
+	background: linear-gradient(to top, DarkGray 80%, white 100%);
 	/*font-family: sans-serif;*/
 }
 
@@ -17,7 +18,7 @@ body{
 .header .header-middle {
 	text-align: center;
 	line-height: 0.4;
-	background-color: lightblue;
+	background-color: DarkGray;
 	border: 1px solid black;
 	width: 500px;
 	height: 100px;

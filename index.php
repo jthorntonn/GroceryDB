@@ -33,8 +33,8 @@
 <body>
 	<div class="header">
 		<div class="header-middle">
-			<h1>STORE.COM</h1>
-			<p id="addr">Store address goes here...</p>
+			<h1><a href="index.php" style="color:white"</a>STORE.COM</h1>
+			<a href="https://www.google.com/maps" style="color:white"<p id="addr">Store address goes here...</p></a>
 			<select id="storeNumb">
 				<option value="Store1" selected>Store 1</option>
 				<option value="Store2">Store 2</option> 
@@ -47,7 +47,7 @@
 	
 	<?php
 		$_SESSION["username"] = "user_name";
-		$_SESSION["password"] - "pass_word";
+		$_SESSION["password"] = "pass_word";
 	?>
 
 	<div class="search">
