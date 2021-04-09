@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,19 +32,14 @@
 			<h1><a href="index.php" style="color:white"</a>STORE.COM</h1>
 			<a href="https://www.google.com/maps" style="color:white"<p id="addr">Store address goes here...</p></a>
 			<select id="storeNumb">
-				<option value="Store1" selected>Store 1</option>
-				<option value="Store2">Store 2</option> 
+				<option value="Store1">Store 1</option>
+				<option value="Store2" selected >Store 2</option> 
 			</select>
 		</div>
 		<div class="header-login">
 			<button type="button" id="loginbutton">Manager<br>Login</button>
 		</div>
 	</div>
-	
-	<?php
-		$_SESSION["username"] = "user_name";
-		$_SESSION["password"] = "pass_word";
-	?>
 
 	<div class="search">
 		<form>
@@ -56,8 +47,8 @@
 		</form>
 	</div>
 
-	<div class="gallery-slider" style="float:left;">
-		<div class="gallery-container" style="float:left;"> </div>
+	<div class="gallery-slider">
+		<div class="gallery-container"> </div>
 		<script>
 		/* Insert data from DB into html to be styled inta a gallery view  */
 		for(let i=0; i < food_array.length; i++) {
@@ -68,8 +59,8 @@
 					food_array[i][3] + "<br>" +
 					food_array[i][4] + "<br>$" +
 					food_array[i][5] + "</div></div>");
-				}	
-			}
+			}	
+		}
 		</script>
 		<div class="gallery-controls">
 			<ul>
