@@ -34,7 +34,7 @@
 	<div class="header">
 		<div class="header-middle">
 			<h1><a href="index.php" style="color:white"</a>STORE.COM</h1>
-			<a href="https://www.google.com/maps" style="color:white"<p id="addr">Store address goes here...</p></a>
+			<a href="https://www.google.com/maps/place/409+N+Fruitland+Blvd,+Fruitland,+MD+21826/@38.3282466,-75.6126314,17z/data=!3m1!4b1!4m5!3m4!1s0x89b90419c85f14af:0x86eed8df71b325f4!8m2!3d38.3282424!4d-75.6104427" style="color:white"<p id="addr">Store address goes here...</p></a>
 			<select id="storeNumb">
 				<option value="Store1" selected>Store 1</option>
 				<option value="Store2">Store 2</option> 
@@ -65,7 +65,7 @@
 				$("#addr").html(food_array[i][2]);
 				$(".gallery-container" ).append(
 					"<div class=\"item\"> <div class=\"foodinfo\" >" +
-					food_array[i][3] + "<br>" +
+					food_array[i][3] + "<br>" + 
 					food_array[i][4] + "<br>$" +
 					food_array[i][5] + "</div></div>");
 				}	
