@@ -52,11 +52,10 @@ $(document).ready(function () {
 			if (food_array[i][0] == $("#storeNumb").val()) {
 				$("#addr").html(food_array[i][2]);
 				$(".gallery-container").append(
-					'<div class="item"> <div class="foodinfo" >' +
-					food_array[i][3] + '<br>' +
-					food_array[i][4] + '<br>$' +
-					food_array[i][5] +
-					'</div></div>');
+					"<div class=\"item\"> <div class=\"foodinfo\" >" +
+					food_array[i][3] + "<br>" +
+					food_array[i][4] + "<br>$" +
+					food_array[i][5] + "</div></div>");
 			}
 		}
 		// apply styling so that the width of each item stay consistant
