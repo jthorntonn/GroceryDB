@@ -71,3 +71,28 @@
 	</div>
 </body>
 </html>
+
+<!--
+	say wee have a folder name "Pictures" that has images.
+	The images are named after each products from the database
+	e.g Bread.png, Kale.png, Ground Beef.png
+
+	To kind of automatically call them, we could do something like:
+
+	if( food_array[i][0] == $("#storeNumb").val()) {
+		
+
+***		$picture_location = "Pictures\" + food_array[i][3] + ".png";
+						//the folder	the food name	 the extention
+		
+						
+		$("#addr").html(food_array[i][2]);
+		$(".gallery-container" ).append(
+***			"<div class=\"item\"> <img src=" + $picture_location + "> <div class=\"foodinfo\" >" +
+			food_array[i][3] + "<br>" +
+			food_array[i][4] + "<br>$" +
+			food_array[i][5] + "</div></div>");
+	}
+
+	just double check the quotes when adding it to the script
+	-->
