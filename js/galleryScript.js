@@ -50,12 +50,14 @@ $(document).ready(function () {
 		$(".gallery-container").empty();
 		for (let i = 0; i < food_array.length; i++) {
 			if (food_array[i][0] == $("#storeNumb").val()) {
+				var image = "'GroceryDB-Images/" + food_array[i][3] + ".jpg'";
 				$("#addr").html(food_array[i][2]);
 				$(".gallery-container").append(
-					"<div class=\"item\"> <div class=\"foodinfo\" >" +
+					"<div class=\"item\"> <img src=" + image + " style=\"width:100%; height:250px;\"/> <div class=\"foodinfo\" >" +
 					food_array[i][3] + "<br>" +
 					food_array[i][4] + "<br>$" +
 					food_array[i][5] + "</div></div>");
+					console.log(image);
 			}
 		}
 		// apply styling so that the width of each item stay consistant
