@@ -12,9 +12,10 @@ body
 }
 
 .header .header-logo {
-	position: absolute;
+	position: relative;
 	top: 0px;
-	right: 0px;
+	margin-left: auto;
+	margin-right:auto;
 	text-align: center;
 	line-height: 0.4;
 	background-color: DarkGray;
@@ -48,21 +49,42 @@ body
 	display: block;
 }
 
-.products {
-	border: 2px solid black;
-	display: block;
+.header .edit-buttons {
+	position: fixed;
 	float: left;
-	height: 100px;
-	width: 100px;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
+
+}
+.products {
+	margin-top: 25px;
+	margin-left: 10px;
+	border: 2px solid black;
+	float: left;
+	width: 45%;
+	padding: 5px;
 
 }
 
 .suppliers {
+	margin-top: 25px;
+	margin-right: 10px;
+	content: "";
 	border: 2px solid black;
-	display: block;
 	float: right;
-	height: 100px;
-	width: 100px;
+	width: 45%;
+	padding: 5px;
+	display: table;
 }
 
+.table {
+	padding 2px;
+}
+
+.table-entry{
+	border: 2px solid black;
+	text-align: center;
+}
 
