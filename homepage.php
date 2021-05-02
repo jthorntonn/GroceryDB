@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <title>Store.com</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+</head>
 <body>
 
 <!-- Navbar -->
@@ -19,9 +21,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="homepage.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <form action="" method="POST"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 1"></form>
-    <form action="" method="POST"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 2"></form>
-    <form action="" method="POST"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 3"></form>
+    <form action="gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 1" name="STORE"></form>
+    <form action="gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 2" name="STORE"></form>
+    <form action="gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 3" name="STORE"></form>
 	
   </div>
 
