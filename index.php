@@ -3,6 +3,15 @@
 <head>
 	<title>Grocery Store</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+	.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+	.fa-anchor,.fa-coffee {font-size:200px}
+	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="js/galleryScript.js"></script>
@@ -28,14 +37,22 @@
 </head>
 <body>
 	<div class="header">
-		<div class="header-middle">
+		<div class="header-middle"> 
 			<h1><a href="index.php" style="color:white"</a>STORE.COM</h1>
 			<a href="https://www.google.com/maps/place/409+N+Fruitland+Blvd,+Fruitland,+MD+21826/@38.3282466,-75.6126314,17z/data=!3m1!4b1!4m5!3m4!1s0x89b90419c85f14af:0x86eed8df71b325f4!8m2!3d38.3282424!4d-75.6104427" style="color:white"<p id="addr">Store address goes here...</p></a>
 			<select id="storeNumb">
 				<option value="Store1">Store 1</option>
 				<option value="Store2" selected >Store 2</option> 
-			</select>
+			</select>	
 		</div>
+	<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="index.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Store 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Store 2</a>
+	<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Store 3</a>
+  </div>
 		<div class="header-login">
 			<button type="button" id="loginbutton">Manager<br>Login</button>
 		</div>
@@ -70,6 +87,11 @@
 			</ul>
 		</div>
 	</div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+		<p class="w3-text-black">Footer</p>
+ </div>
+</footer>
 </body>
 </html>
 
