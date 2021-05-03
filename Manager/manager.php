@@ -32,7 +32,7 @@
 	echo '</table>';
 	?>
 
-	<form action="" method="post"> <input type="submit" value="Update"> </form>
+	<form action="updateProduct.php" method="post"> <input type="submit" value="Update"> </form>
 	<form action="addProduct.php" method="post"> <input type="submit" value="Add"> </form>
 	<form action="removeProduct.php" method="post"> <input type="submit" value="Remove"> </form>
 
@@ -59,39 +59,9 @@
 	echo '</table>';
 	?>
 
-	<form action="" method="post"> <input type="submit" value="Update"> </form>
-	<form action="" method="post"> <input type="submit" value="Add"> </form>
-	<form action="" method="post"> <input type="submit" value="Remove"> </form>
-	
-	<?php
-	$phoneN = "1234567890";
-
-	$query="SELECT Supplies.sName, Supplies.pName, Supplies.id, Supplies.amountReceived, Supplies.date 
-			FROM Supplies RIGHT JOIN Sells ON Supplies.pName = Sells.pName 
-			WHERE Sells.phoneNum = $phoneN";
-	$t = mysqli_query($connection, $query);
-
-	echo '<table border="1" class="center">
-		<thead><tr>
-			<th>Supplier Name</th> 
-			<th>Product Name</th> 
-			<th>Product ID</th> 
-			<th>Amount Received</th> 
-			<th>Date Recceived</th>
-		</tr></thead>';
-	while($row=mysqli_fetch_array($t)) {
-		echo '<tr> <td>'. $row['sName'] .'</td>';
-		echo '<td>'. $row['pName'] .'</td>';
-		echo '<td>'. $row['id'] .'</td>';
-		echo '<td>'. $row['amountReceived'] .'</td>';
-		echo '<td>'. $row['date'] .'</td> </tr>';
-	}
-	echo '</table>';
-	mysqli_close($connection);
-	?>
-
-	<form action="" method="post"> <input type="submit" value="Add"> </form>
-	<form action="" method="post"> <input type="submit" value="Remove"> </form>
+	<form action="updateSupplier.php" method="post"> <input type="submit" value="Update"> </form>
+	<form action="addSupplier.php" method="post"> <input type="submit" value="Add"> </form>
+	<form action="removeSupplier.php" method="post"> <input type="submit" value="Remove"> </form>
 
 </body>
 </html>
