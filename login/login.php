@@ -11,6 +11,12 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+body{
+                        background: #7BCC70
+
+
+                        }
+
 </style>
 
 
@@ -47,8 +53,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	<link rel="stylesheet" href="./example.css">	
 </head>
 <body>
+<br><br><br><br><br><br><br>
 <div class="login">
-	<p align = 'center' style = 'color: #08ffd1;' size= 1px>LOGIN</p>
+	<p align = 'center' style = 'color: #7BCC70;'>LOGIN</p>
  <form id="login" method = post >
 
     <!--   <p align = 'center' style = 'color: black;'>--!><label><b>Username:</b></label><br> <input type="text" id="USERNAME"  name="USERNAME" placeholder='search'>
