@@ -15,9 +15,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <div class="w3-top">
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+<<<<<<< HEAD
    	<button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/logout.php';" type="button" id="loginbutton">Logout</button>
 	<button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/createAccount.php';" type="button" id="loginbutton">Create Account</button> 
 </div>
+=======
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="../homepage.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <form action="../gallery.php" method="get"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 1" name="STORE"></form>
+    <form action="../gallery.php" method="get"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 2" name="STORE"></form>
+    <form action="../gallery.php" method="get"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 3" name="STORE"></form>
+
+  </div>
+>>>>>>> 269eaa3dcad7696379e05309a9eb6978aae96bb0
 
  
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">

@@ -12,6 +12,7 @@
 	.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 	.fa-anchor,.fa-coffee {font-size:200px}
 	</style>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="js/galleryScript.js"></script>
