@@ -37,18 +37,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Header -->
 <header class="w3-container w3-green w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Store.com</h1>
+  <h1 class="w3-margin w3-jumbo">Jing's Goods</h1>
 </header>
 
 <!-- First Section -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Store Information</h1>
-      <h5 class="w3-padding-32">Store Information</h5>
+      <h1>Stores in three locations</h1>
+      <h5 class="w3-padding-32">Navigate through the stores for more information</h5>
 
-      <p class="w3-text-grey">Store Information</p>
-    </div>
+          </div>
 
     <div class="w3-third w3-center">
     </div>
@@ -62,22 +61,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-twothird">
-      <h1>Store.com</h1>
-      <h5 class="w3-padding-32">Store Information</h5>
+      <h1>Jing's Goods</h1>
+      <h5 class="w3-padding-32">Fresh food & produce</h5>
 
-      <p class="w3-text-grey">Store Information</p>
     </div>
   </div>
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Fresh Food</h1>
+    <h1 class="w3-margin w3-xlarge">If you are a manager please navigate to the 'login' button</h1>
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
-		<p class="w3-text-black">Footer</p>
+		<p class="w3-text-black">COSC 386</p>
  </div>
 </footer>
 
