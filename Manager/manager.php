@@ -13,28 +13,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 
 
-<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="../homepage.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <form action="../gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 1" name="STORE"></form>
-    <form action="../gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 2" name="STORE"></form>
-    <form action="../gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 3" name="STORE"></form>
-
-  </div>
-
-  <!-- Navigation Bar 2 -->
+   	<button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/logout.php';" type="button" id="loginbutton">Logout</button>
+	<button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/createAccount.php';" type="button" id="loginbutton">Create Account</button> 
+</div>
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 1</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 2</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 3</a>
+	<a href="#" class="w3-bar-item w3-button w3-padding-large">Store 3</a>       
   </div>
-</div>
 
-	</head>
-	<button onclick="location.href = '../login/logout.php';" type="button" id="loginbutton">Logout</button>
-        <button onclick="location.href = '../login/createAccount.php';" type="button" id="loginbutton">Create Account</button>
+ </div>
+</head>
+	
+
 <body>
 	<?php
 	session_start();
@@ -74,13 +67,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	}
 	
 	echo '</table>';
-	?>
-
+?>
 	<form action="updateProduct.php" method="post"> <input type="submit" value="Update"> </form>
 	<form action="addProduct.php" method="post"> <input type="submit" value="Add"> </form>
 	<form action="removeProduct.php" method="post"> <input type="submit" value="Remove"> </form>
-
-	<?php
+<?php
 
 	$query="SELECT * FROM Supplier";
 	$t=mysqli_query($connection, $query);

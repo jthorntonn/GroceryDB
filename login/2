@@ -108,7 +108,7 @@ if($PASSWORD != NULL && $USERNAME != NULL && $PHONENUM != NULL){
                         die("Connection failed: " . $connection->connect_error);
                 }
                 $r=mysqli_query($connection, $query);
-		echo "<script> window.location.assign('../Manager/manager.php'); </script>";
+		echo "<script> window.location.assign('manager.php'); </script>";
 }
                // $loginInfo = array();
                // while($row=mysqli_fetch_array($r)){
