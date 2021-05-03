@@ -24,7 +24,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <form action="gallery.php" method="get"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 1" name="STORE"></form>
     <form action="gallery.php" method="get"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 2" name="STORE"></form>
     <form action="gallery.php" method="get"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 3" name="STORE"></form>
-	<button class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="location.href = 'login/login.php';" type="button" id="loginbutton">Login</button>
+	<button class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = 'login/login.php';" type="button" id="loginbutton">Login</button>
   </div>
 
 

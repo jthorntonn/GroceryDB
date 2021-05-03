@@ -44,6 +44,9 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
+	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
+	
+	<p>Available Products that can be added</p>
 	<?php
 	include 'functions.php';
 	$connection = connect();

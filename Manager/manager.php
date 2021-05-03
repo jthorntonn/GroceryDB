@@ -29,6 +29,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	
 
 <body>
+	<p>Store products</p>
 	<?php
 	session_start();
         if($_SESSION['loggedIn']==true){
@@ -68,9 +69,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	
 	echo '</table>';
 ?>
-	<form action="updateProduct.php" method="post"> <input type="submit" value="Update"> </form>
-	<form action="addProduct.php" method="post"> <input type="submit" value="Add"> </form>
-	<form action="removeProduct.php" method="post"> <input type="submit" value="Remove"> </form>
+	<div>
+		<form action="updateProduct.php" method="post"> <input type="submit" value="Update"> </form>
+		<form action="addProduct.php" method="post"> <input type="submit" value="Add"> </form>
+		<form action="removeProduct.php" method="post"> <input type="submit" value="Remove"> </form>
+	</div>
+
+	<p>Supplier information</p>
+
 <?php
 
 	$query="SELECT * FROM Supplier";

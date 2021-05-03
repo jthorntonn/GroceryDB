@@ -38,6 +38,8 @@ if(isset($_POST['submit']))	{
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
+	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
+
 	<form action="?" method="post">
 		<input type="text" name="product_name" placeholder="pName">
 		<input type="text" name="phoneNum" placeholder="phone Number">
