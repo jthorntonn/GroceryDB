@@ -1,12 +1,54 @@
 body {
 	text-align: center;
 	padding: 100px 0;
-	background: #99ff66;
+	background: #4caf50;
 }
 
 input[type=submit]{
 	color: white;
 	background: black;
+}
+
+.header {
+	height: 100px;
+	padding: 10px;
+	
+}
+
+.header .header-logo {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	line-height: 0.4;
+	background-color: DarkGray;
+	border: 1px solid black;
+	width: 400px;
+	height: 80px;
+}
+
+.header .header-username {
+	/* ex "Welcome manager thomas32" */
+	margin: auto;
+	text-align: center;
+	border: 1px solid black;
+	background-color: DarkOrange;
+	width: 400px;
+	height: 80px;
+}
+
+.header .header-logout {
+	width: 50px;
+	position: absolute;
+	top: 28px;
+	right: 70px;
+	
+}
+
+.header .header-logout #logoutbutton {
+	height: 80px;
+	width: 80px;
+	display: block;
 }
 
 table.center {
@@ -15,8 +57,3 @@ table.center {
   width:20%;
 }
 
-table, th, td {
-  border: 2px solid black;
-  border-collapse: collapse;
-  text-align:center;
-}
