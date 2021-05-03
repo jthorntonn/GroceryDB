@@ -71,7 +71,7 @@ if(isset($_POST['submit']))     {       // if Add button is pressed
                 <input type="text" name="sName" placeholder="Supplier Name">
                 <input type="text" name="sPhone" placeholder="Supplier Phone">
                 <input type="text" name="shippingDays" placeholder="Shipping Days">
-                <input type="submit" name="submit" value="Add">
+                <input type="submit" name="submit" value="Update">
         </form>
 </body>
 

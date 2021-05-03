@@ -27,7 +27,8 @@ body{
 <div class="w3-top">
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
         <button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/logout.php';" type="button" id="loginbutton">Logout</button>
-        <button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/createAccount.php';" type="button" id="loginbutton">Create Account</button> 
+        <!--button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/createAccount.php';" type="button" id="loginbutton">Create Account</button--> 
+		<button class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../Manager/manager.php';" type="button" id="loginbutton">Go Back</button>
 </div>
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 1</a>
@@ -38,6 +39,7 @@ body{
 <link rel="stylesheet" href="./example.css">
 </head>
 <body>
+	
 
 <!--
         <p align = 'center' style = 'color: black;'>Create Account</p>
