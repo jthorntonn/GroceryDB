@@ -80,7 +80,7 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 	<form action="?" method="post">
 		<input type="text" name="product_name" placeholder="Product Name">
 		<input type="text" name="product_id" placeholder="Product id">
-		<input type="text" name="phoneNum" placeholder="Store Phone Number" value="1234567890">
+		<input type="text" name="phoneNum" placeholder="Store Phone Number">
 		<input type="text" name="addr" placeholder="Store Address">
 		<input type="date" name="date">
 		<input type="submit" name="submit" value="Add">
