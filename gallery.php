@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 include 'functions.php';
 
@@ -21,7 +22,40 @@ close($connection);
 ?>
 
 <html>
-	<head>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <form action="gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 1" name="STORE"></form>
+    <form action="gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 2" name="STORE"></form>
+    <form action="gallery.php" method="post"><input class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" type="submit" value="Store 3" name="STORE"></form>
+	
+  </div>
+
+  <!-- Navigation Bar 2 -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 2</a>
+	<a href="#" class="w3-bar-item w3-button w3-padding-large">Store 3</a>
+  </div>
+</div>
+
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function () {
@@ -76,8 +110,9 @@ close($connection);
 			.gallery-slider {
 				/*border: 1px solid black;*/
 				margin-top: 20px;
-				height: 500px;
+				/*height: 500px;*/
 				width: 100%;
+				padding-top: 50px;
 				float: left;
 				overflow: hidden;
 			}
@@ -126,6 +161,12 @@ close($connection);
 				display: inline-block;
 				line-height: 33px;
 				cursor: pointer;
+			}
+			
+			body{
+			background: #7BCC70 
+
+
 			}
 		</style>
 	</head>
