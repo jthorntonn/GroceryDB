@@ -1,5 +1,15 @@
 <?php
 
+session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
+
 if(isset($_POST['submit']))	{
 	include 'functions.php';
 	$connection = connect();

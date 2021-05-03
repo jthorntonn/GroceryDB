@@ -1,4 +1,15 @@
 <?php
+session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
+        $phoneN = $_SESSION['phoneNum'];
+                //"1234567890";
 
 if(isset($_POST['submit']))	{
 	include 'functions.php';
