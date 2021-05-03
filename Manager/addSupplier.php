@@ -1,4 +1,13 @@
 <?php
+session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
 
 if(isset($_POST['submit']))	{	// if Add button is pressed
 	include 'functions.php';
@@ -31,6 +40,9 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
+	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
+
+	<p>Supplier information</p>
 	<?php
 	include 'functions.php';
 	$connection = connect();

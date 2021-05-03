@@ -1,5 +1,18 @@
 <?php
 
+ session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
+        $phoneN = $_SESSION['phoneNum'];
+                //"1234567890";
+
+
 if(isset($_POST['submit']))	{	// if Add button is pressed
 	include 'functions.php';
 	$connection = connect();
@@ -31,6 +44,9 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
+	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
+	
+	<p>Available Products that can be added</p>
 	<?php
 	include 'functions.php';
 	$connection = connect();
@@ -40,7 +56,7 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 
 	$query="SELECT * FROM Product WHERE Product.pName NOT IN 
 			(SELECT Product.pName FROM Product NATURAL JOIN Sells NATURAL JOIN Store 
-			WHERE Store.phoneNum = \"1234567890\")";
+			WHERE Store.phoneNum = \"$phoneN\")";
 	$t=mysqli_query($connection, $query);
 	echo '<table border="1" class="center">
 		<thead><tr>

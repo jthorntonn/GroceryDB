@@ -1,0 +1,54 @@
+  
+    .login{  
+            width: 382px;  
+            overflow: hidden;  
+            margin: auto;  
+            margin: 20 0 0 450px;  
+            padding: 80px;  
+            background: #FFFFFF;  
+            border-radius: 15px ;  
+              
+    }  
+    h2{  
+        text-align: center;  
+        color: #277582;  
+        padding: 20px;  
+    }
+    #USERNAME{
+	width: 200px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+	background-color: #7BCC70;
+    }
+    #PASSWORD{
+	width: 200px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        padding-left: 8px;
+	background-color: #7BCC70;
+    }
+    #PHONENUM{
+	width: 200px;
+        height: 30px;
+        border: none;
+        border-radius: 3px;
+        padding-left: 8px;
+        background-color: #7BCC70;
+    }
+    label{
+	margin: center;
+	color: #000000;
+	font-size: 17px;
+    }
+    #submit{
+	width: 200px;
+	height: 30px;
+	border: none;
+	padding-left: 7px;	
+	border-radius: 7px;
+	color: black;
+	background-color: #7BCC70;
+    }

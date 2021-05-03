@@ -1,5 +1,16 @@
 
 <?php
+session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
+        $phoneN = $_SESSION['phoneNum'];
+                //"1234567890";
 
 if(isset($_POST['submit']))	{	// if Add button is pressed
 	include 'functions.php';
@@ -31,13 +42,17 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
+	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
+
+	<p>Store Products</p>
+
 	<?php
 	include 'functions.php';
 	$connection = connect();
 	if (!$connection) {
 		die("Connection failed: " . $connection->connect_error);
 	}
-	$phoneN="1234567890";
+//	$phoneN="1234567890";
 	$query= "SELECT * FROM Sells NATURAL JOIN Store WHERE Store.phoneNum = $phoneN";
 	$t = mysqli_query($connection, $query);
 

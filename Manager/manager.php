@@ -1,16 +1,54 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+   	<button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/logout.php';" type="button" id="loginbutton">Logout</button>
+	<button  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float:right" onclick="location.href = '../login/createAccount.php';" type="button" id="loginbutton">Create Account</button> 
+</div>
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Store 2</a>
+	<a href="#" class="w3-bar-item w3-button w3-padding-large">Store 3</a>       
+  </div>
+
+ </div>
+</head>
+	
+
 <body>
+	<p>Store products</p>
 	<?php
+	session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
 	include 'functions.php';
 	$connection = connect();
 	if (!$connection) {
 		//die prints message then ends script
 		die("Connection failed: " . $connection->connect_error);
 	}
-	$phoneN = "1234567890";
+
+	$phoneN = $_SESSION['phoneNum'];
+		//"1234567890";
 
 	$query="SELECT * FROM Sells NATURAL JOIN Store WHERE Store.phoneNum = $phoneN";
 	$t = mysqli_query($connection, $query);
@@ -30,13 +68,16 @@
 	}
 	
 	echo '</table>';
-	?>
+?>
+	<div>
+		<form action="updateProduct.php" method="post"> <input type="submit" value="Update"> </form>
+		<form action="addProduct.php" method="post"> <input type="submit" value="Add"> </form>
+		<form action="removeProduct.php" method="post"> <input type="submit" value="Remove"> </form>
+	</div>
 
-	<form action="updateProduct.php" method="post"> <input type="submit" value="Update"> </form>
-	<form action="addProduct.php" method="post"> <input type="submit" value="Add"> </form>
-	<form action="removeProduct.php" method="post"> <input type="submit" value="Remove"> </form>
+	<p>Supplier information</p>
 
-	<?php
+<?php
 
 	$query="SELECT * FROM Supplier";
 	$t=mysqli_query($connection, $query);

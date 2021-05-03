@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+        if($_SESSION['loggedIn']==true){
+                //allow processing
+        }
+        else{
+
+        echo "<script> window.location.assign('../login/login.php'); </script>";
+        }
+
 if(isset($_POST['submit']))	{
 	include 'functions.php';
 	$connection = connect();
@@ -28,6 +37,7 @@ if(isset($_POST['submit']))	{
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
+	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
 
 	<form action="?" method="post">
 		<input type="text" name="sName" placeholder="Supplier Name">
