@@ -7,8 +7,8 @@ if (!$connection) {
 	//die prints message then ends script
 	die("Connection failed: " . $connection->connect_error);
 }
-
-$query="SELECT * FROM Sells NATURAL JOIN Product NATURAL JOIN Store";
+$name = mysqli_real_escape_string($connection, $_GET['STORE']);
+$query="SELECT * FROM Sells NATURAL JOIN Product NATURAL JOIN Store WHERE name = '$name'";
 $t =mysqli_query($connection, $query);
 $food_array = array();
 while($row=mysqli_fetch_array($t)) {
@@ -110,12 +110,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		<style>
 			.gallery-slider {
 				/*border: 1px solid black;*/
-				margin-top: 20px;
+				margin-top: auto;
 				/*height: 500px;*/
 				width: 100%;
-				padding-top: 50px;
+				padding-top: auto;
 				float: left;
 				overflow: hidden;
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
 			}
 
 			.gallery-slider .gallery-container {
@@ -127,7 +132,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			.gallery-slider .item {
 				height: 400px;
 				border: 2px solid black;
-				background-color: grey;
+				background-color: #4CAF50;
 				line-height: 250px;
 				text-align: center;
 				font-size: 20px;
@@ -166,9 +171,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			
 			body{
 			background: #7BCC70 
-
-
 			}
+
+			footer {
+				position: fixed;
+				bottom: 0%;
+				width: 100%;
+				background: #4CAF50;
+				text-align: center;
+				color: white;
+			}
+
+			footer div{
+				text-align: center;
+				display: inline-block;
+				line-height: 0.7;
+				padding-left:50px;
+				padding-right:50px;
+			}
+
 		</style>
 	</head>
 <body>
@@ -196,5 +217,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			</ul>
 		</div>
 	</div>
+	<footer>  
+		<div >
+			<?php
+			echo '<div"><h4><u>Location</u></h4><p>'. $food_array[0][2]. '</p></div>';
+			echo '<div><h4><u>Contact Us</u></h4><p>'. $food_array[0][1] . '</p></div>';
+			?>
+		</div>
+	</footer>
 </body>
 </html>
