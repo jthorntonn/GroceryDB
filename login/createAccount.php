@@ -63,11 +63,11 @@ body{
         <p align = 'center' style = 'color: #7BCC70;'>Create Account</p>
  <form id="login" method = post >
 
-    <!--   <p align = 'center' style = 'color: black;'>--!><label><b>Username:</b></label><br> <input type="text" id="USERNAME"  name="USERNAME" placeholder=''>
+    <!--   <p align = 'center' style = 'color: black;'>--!><label><b>Username:</b></label><br> <input type="text" id="USERNAME"  name="USERNAME" placeholder='username'>
 
-        <br><label><b>Password:<b></label><br> <input type = "password" id = "PASSWORD" name = "PASSWORD" placeholder =''>
+        <br><label><b>Password:<b></label><br> <input type = "password" id = "PASSWORD" name = "PASSWORD" placeholder ='password'>
 	<br>
-	<label><b>PhoneNum:<b></label><br><input type = "text" id = "PHONENUM" name= "PHONENUM" placeholder=''><br><br>
+	<label><b>PhoneNum:<b></label><br><input type = "text" id = "PHONENUM" name= "PHONENUM" placeholder='phone number'><br><br>
         <input type ="submit" id="submit" name="Enter">
 <!--    </p>     --!>
 </form>

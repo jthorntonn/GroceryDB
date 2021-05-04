@@ -30,8 +30,8 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 			VALUES ('$pName', $id,'$phoneNum','$addr', 0, '$date')";
 
 	if( mysqli_query($connection, $query) ) {
-		header('Location: manager.php');
 		mysqli_close($connection);
+		header('Location: manager.php');
 	}
 	else {
 		echo 'query error: ' . mysqli_error($connection);
@@ -43,10 +43,10 @@ if(isset($_POST['submit']))	{	// if Add button is pressed
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-<body>
+<body style="background: #7BCC70;">
 	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
 	
-	<p>Available Products that can be added</p>
+	<h3>Available Products that can be added</h3>
 	<?php
 	include 'functions.php';
 	$connection = connect();

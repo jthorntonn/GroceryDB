@@ -37,7 +37,7 @@ if(isset($_POST['submit']))	{
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-<body>
+<body style="background: #7BCC70;">
 	<button style="color: white;background: black; margin-bottom:10px" onclick="location.href = 'manager.php';" type="button" id="loginbutton">Go Back</button>
 
 	<form action="?" method="post">
