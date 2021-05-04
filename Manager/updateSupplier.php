@@ -32,6 +32,7 @@ if(isset($_POST['submit']))     {       // if Add button is pressed
         }
         else {
                 echo 'query error: ' . mysqli_error($connection);
+				echo '<script>alert("error!"); window.location.assign("manager.php");</script>';
         }
 }
 ?>

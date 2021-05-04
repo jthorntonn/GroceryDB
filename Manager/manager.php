@@ -285,12 +285,33 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			</div>
 		
 			<input type="submit" name="submit" value="Remove">
-	</form>
+		</form>
 	</div>
+
+	<br><br>
+	<h3>Suppliers Products</h3>
 	
-	<br>
+	<?php
+	$query="SELECT * FROM Supplies ORDER BY sName ASC";
+	$t=mysqli_query($connection, $query);
+
+	echo '<table border="1" class="center">
+		<thead><tr>
+			<th>Supplier Name</th> 
+			<th>Product Name</th> 
+			<th>Product Id</th>
+		</tr></thead>';
+	while($row=mysqli_fetch_array($t)) {
+		echo '<tr> <td>'. $row['sName'] .'</td>';
+		echo '<td>'. $row['pName'] .'</td>';
+		echo '<td>'. $row['id'] .'</td> </tr>';
+	}
+	echo '</table>';
+	?>
 
 	<button onclick="showHideForm('addNewProduct')" style="color: white;background: black;margin-top: 10px;">New Product From Supplier</button>
+	<button onclick="showHideForm('deleteProduct')" style="color: white;background: black;margin-top: 10px;">Delete Product</button>
+
 	<div id="addNewProduct" style="outline: 2px dashed black; width:70%; margin:auto; padding:10px">
 	<form action="addNewProduct.php" method="post">
 		<p><b>**Please use (or add) a Supplier from <u>Suppliers informations</u> Table**</b></p>
@@ -342,6 +363,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		<input style="margin-top: 10px;" type="submit" name="prodsubmit" value="Add">
 	</form>
 	</div>
+
+	<div id="deleteProduct" style="outline: 2px dashed black; width:70%; margin:auto; padding:10px">
+		<p><b>**Deleting a product will affect other stores if selling**</b></p>
+		
+		<form action="deleteProduct.php" method="post">
+			<div style="display:inline-block;">
+			<label for="product_name">Name</label><br>
+			<input type="text" name="product_name" placeholder="Product Name" required>
+			</div>
+
+			<div style="display:inline-block;">
+			<label for="product_id">Id</label><br>
+			<input type="text" name="product_id" placeholder="Product id" required>
+			</div>
+
+			<input style="margin-top: 10px;" type="submit" name="delsubmit" value="Delete">
+		</form>
+	</div>
 	
 	<br><br><br>
 	<h3>Store's Relevant Information</h3>
@@ -370,8 +409,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	var x = document.getElementById("removeSupplier").style.display = "none";
 
 	var x = document.getElementById("addNewProduct").style.display = "none";
+	var x = document.getElementById("deleteProduct").style.display = "none";
+
 	ids = ["updateProduct", "addProduct", "removeProduct", "updateSupplier", 
-				"addSupplier", "removeSupplier", "addNewProduct"];
+				"addSupplier", "removeSupplier", "addNewProduct", "deleteProduct"];
 
 	function showHideForm(id) {
 		var x = document.getElementById(id);

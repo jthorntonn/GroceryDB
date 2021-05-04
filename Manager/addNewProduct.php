@@ -37,7 +37,7 @@ if(isset($_POST['prodsubmit'])) {
 		header('Location: manager.php');
 	}
 	else {
-		echo 'alert(query error: ' . mysqli_error($connection) .')';
+		echo '<script>alert(query error: ".' . mysqli_error($connection) .'");window.location.assign("manager.php");</script>';
 	}
 
 	close($connection);
