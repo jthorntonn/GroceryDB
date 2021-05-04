@@ -389,12 +389,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	$phoneN = $_SESSION['phoneNum'];
 	$query="SELECT * FROM Store WHERE phoneNum = $phoneN";
 	$t = mysqli_query($connection, $query);
-	echo '<table border="1" class="center">
-		<thead><tr>
-		</tr></thead>';
+	echo '<table border="1" class="center">';
+		//<thead><tr>
+		//</tr></thead>';
 		while($row=mysqli_fetch_array($t)) {
-			echo '<tr> <td> Phone  :  '. $row['phoneNum'] .'</td>';
-			echo '<td> Address  :  '. $row['addr'] .'</td> </tr>';
+			echo '<thead><tr><th> Phone  :  '. $row['phoneNum'] .'</th></td>';
+			echo '<th> Address  :  '. $row['addr'] .'</th></tr></thead>';
 		}
 		close($connection);
 	?>

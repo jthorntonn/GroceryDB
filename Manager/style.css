@@ -15,6 +15,10 @@ table.center {
   width:50%;
 }
 
+.center th {
+	background-color: #4CAF50;
+}
+
 form {
 	margin-top: 10px
 }
